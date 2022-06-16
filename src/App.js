@@ -1,17 +1,17 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import StickyNavbar from './components/StickyNavbar';
+import { ThemeProvider } from 'react-bootstrap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h3>
-          ¡Bienvenid@ a Dribble Sportswear!
-        </h3>
-          Este sitio se encuentra en construcción.
-      </header>
-    </div>
+    <ThemeProvider
+      breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
+    >
+      <div className="App">
+        <StickyNavbar />
+      </div>
+    </ThemeProvider>
   );
 }
 
