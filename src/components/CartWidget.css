@@ -1,0 +1,19 @@
+.cart-container {
+    color: rgb(255 255 255 / 100%);
+    background: transparent;
+    border: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.cart-container:hover {
+    color: rgba(255,255,255,.75);
+}
+
+.cart-container svg {
+    width: 28px;
+    height: 28px;
+}
+
+.cart-container .cart-counter {
+    display: inline-block;
+}

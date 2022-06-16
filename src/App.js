@@ -1,7 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import StickyNavbar from './components/StickyNavbar';
+
 import { ThemeProvider } from 'react-bootstrap';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
     >
       <div className="App">
         <StickyNavbar />
+        <ItemListContainer />
       </div>
     </ThemeProvider>
   );
