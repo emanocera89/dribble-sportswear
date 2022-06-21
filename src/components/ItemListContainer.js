@@ -1,10 +1,13 @@
 import './ItemListContainer.css';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 
-function ItemListContainer() {
+function ItemListContainer({ title, children }) {
   return (
     <Container className='pt-4 pb-4'>
-        <h2>Bienvenid@ a Dribble Sportswear</h2>
+      <h2>{title}</h2>
+      <Row>
+        {children}
+      </Row>
     </Container>
   );
 }

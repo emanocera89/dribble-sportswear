@@ -4,6 +4,7 @@ import StickyNavbar from './components/StickyNavbar';
 
 import { ThemeProvider } from 'react-bootstrap';
 import ItemListContainer from './components/ItemListContainer';
+import ProductCard from './components/ProductCard';
 
 function App() {
   return (
@@ -12,7 +13,12 @@ function App() {
     >
       <div className="App">
         <StickyNavbar />
-        <ItemListContainer />
+        <ItemListContainer title="Bienvenid@ a Dribble Sportswear">
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </ItemListContainer>
       </div>
     </ThemeProvider>
   );
