@@ -4,3 +4,7 @@
     padding-left: 1rem;
     font-weight: 300;
 }
+
+.navbar-dark .navbar-brand {
+    width: 150px;
+}

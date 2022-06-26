@@ -7,7 +7,7 @@ function StickyNavbar() {
   return (
     <Navbar expand="lg" sticky="top" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home" title="Dribble Sportswear"><img src={Logo} alt="Dribble Sportswear" width="160" /></Navbar.Brand>
+        <Navbar.Brand href="#home" title="Dribble Sportswear"><img src={Logo} alt="Dribble Sportswear" width="100%" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto ms-4">

@@ -10,10 +10,10 @@
 }
 
 .cart-container svg {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
 }
 
 .cart-container .cart-counter {
-    display: inline-block;
+    background-color: #ea6a3b !important;
 }

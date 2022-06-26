@@ -1,13 +1,15 @@
-import './ItemListContainer.css';
-import { Container, Row } from 'react-bootstrap';
 
-function ItemListContainer({ title, children }) {
+import './ItemListContainer.css';
+import { Container } from 'react-bootstrap';
+import ItemList from './ItemList';
+
+
+function ItemListContainer({ title }) {
+  
   return (
     <Container className='pt-4 pb-4'>
-      <h2>{title}</h2>
-      <Row>
-        {children}
-      </Row>
+      <h2 className='mb-4'>{title}</h2>
+      <ItemList />
     </Container>
   );
 }

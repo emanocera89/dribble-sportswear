@@ -1,0 +1,4 @@
+.item-list-container .skeleton-list > span {
+    display: flex;
+    grid-column-gap: 24px;
+}

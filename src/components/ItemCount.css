@@ -1,0 +1,16 @@
+.item-count-container .input-counter {
+    text-align: center;
+    /*border-left: none;
+    border-right: none;*/
+}
+
+.item-count-container .input-group .btn {
+    border-color: #ced4da;
+    box-shadow: none;
+}
+
+.item-count-container .helper-container {
+    /*text-align: left;*/
+    padding-top: 10px;
+    line-height: 1.2;
+}

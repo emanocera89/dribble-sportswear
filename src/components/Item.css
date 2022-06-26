@@ -1,0 +1,36 @@
+.product-card {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-card .product-img {
+    padding: 0 15px;
+}
+
+.product-card .product-title {
+    margin-bottom: 5px;
+}
+
+.product-card .product-title a {
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+}
+
+.product-card .product-price {
+    font-weight: 600;
+    font-size: 18px;
+    color: #ea6a3b;
+}
+
+.product-card .product-badge-wrapper {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.product-card .product-badge-wrapper .product-badge-light {
+    border: solid 1px #ddd;
+    background: #fff !important;
+    font-weight: 400;
+}
