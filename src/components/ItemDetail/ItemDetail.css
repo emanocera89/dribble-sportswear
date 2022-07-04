@@ -1,0 +1,10 @@
+.product-detail-container .product-price {
+    font-size: 28px;
+    margin: 20px 0;
+    color: #ea6a3b;
+    font-weight: 400;
+}
+
+.product-detail-container .btn-add-to-cart {
+    height: 50px;
+}

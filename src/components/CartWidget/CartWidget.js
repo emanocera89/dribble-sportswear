@@ -1,5 +1,4 @@
 import './CartWidget.css';
-import Icon from "../assets/basket.svg";
 import { Badge } from "react-bootstrap";
 import { IoCartOutline } from "react-icons/io5";
 

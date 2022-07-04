@@ -1,9 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import StickyNavbar from './components/StickyNavbar';
 import { ThemeProvider } from 'react-bootstrap';
-import ItemListContainer from './components/ItemListContainer';
-
+import { StickyNavbar, ItemListContainer, ItemDetailContainer } from "./components";
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
 
@@ -13,7 +12,12 @@ function App() {
     >
       <div className="App">
         <StickyNavbar />
-        <ItemListContainer title="Calzado"/>
+        <Routes>
+          <Route exact path="/" element={<ItemListContainer title="Nuestros productos" />}></Route>
+          <Route exact path="/category/:categoryId" element={<ItemListContainer title="Nuestros productos" />}></Route>
+          <Route exact path="/item/:productId" element={<ItemDetailContainer />}></Route>
+          
+        </Routes>
       </div>
     </ThemeProvider>
   );

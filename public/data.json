@@ -1,58 +1,180 @@
-[
-    {
-        "id": 0,
-        "nombre": "Zapatillas Air Jordan 11 Retro Low",
-        "precio": "47.999",
-        "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw8182be18/products/NI_AH7860-139/NI_AH7860-139-1.JPG?sw=400&sh=400",
-        "stock": 100
-    },
-    {
-        "id": 1,
-        "nombre": "Zapatillas Jordan Air 6 Retro",
-        "precio": "48.999",
-        "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw4d5d3ba8/products/NI_DQ4914-103/NI_DQ4914-103-1.JPG?sw=400&sh=400",
-        "stock": 32
-    },
-    {
-        "id": 2,
-        "nombre": "Zapatillas Jordan Legacy Air 11 Retro",
-        "precio": "52.999",
-        "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dwce3c938f/products/NI_AR0715-010/NI_AR0715-010-1.JPG?sw=400&sh=400",
-        "stock": 0
-    },
-    {
-        "id": 3,
-        "nombre": "Zapatillas Jordan Series Es",
-        "precio": "21.999",
-        "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw515a6421/products/NI_DN1857-001/NI_DN1857-001-1.JPG?sw=400&sh=400",
-        "stock": 10
-    },
-    {
-        "id": 4,
-        "nombre": "Zapatillas Nike Air Force 1 07 Lv8",
-        "precio": "27.999",
-        "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dwbc424bee/products/NI_DH7568-002/NI_DH7568-002-1.JPG?sw=400&sh=400",
-        "stock": 100
-    },
-    {
-        "id": 5,
-        "nombre": "Zapatillas Nike Air Force 1 '07 Essential",
-        "precio": "25.999",
-        "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw4e08044c/products/NI_DH4406-102/NI_DH4406-102-1.JPG?sw=400&sh=400",
-        "stock": 89
-    },
-    {
-        "id": 6,
-        "nombre": "Zapatillas Nike Air Force 1 Lv8",
-        "precio": "23.999",
-        "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw2196142f/products/NI_DH9597-003/NI_DH9597-003-1.JPG?sw=400&sh=400",
-        "stock": 5
-    },
-    {
-        "id": 7,
-        "nombre": "Zapatillas Nike Air Max 90 Se",
-        "precio": "32.499",
-        "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw9ac0fea6/products/NI_DM8171-001/NI_DM8171-001-1.JPG?sw=400&sh=400",
-        "stock": 87
-    }
-]
+{
+    "categorias": [
+        {
+            "id": 0,
+            "nombre": "Hombre"
+        },
+        {
+            "id": 1,
+            "nombre": "Mujer"
+        },
+        {
+            "id": 2,
+            "nombre": "Calzado"
+        },
+        {
+            "id": 3,
+            "nombre": "Camisetas"
+        },
+        {
+            "id": 4,
+            "nombre": "Retro"
+        }
+    ],
+    "items": [
+        {
+            "id": 0,
+            "nombre": "Zapatillas Air Jordan 11 Retro Low",
+            "descripcion": "Las zapatillas Air Jordan 11 Retro Low están confeccionadas en su parte superior de cuero genuino, cuero sintético y tela que ofrecen un estilo único. Nacidas en 1995, las Air Jordan 11 dieron la vuelta al mundo con sus tonos tropicales que se fusiona con la unidad Air Sole para mayor amortiguación. La suela de goma proporciona una mayor tracción y durabilidad.",
+            "precio": "47.999",
+            "categorias": [
+                1,
+                2
+            ],
+            "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw8182be18/products/NI_AH7860-139/NI_AH7860-139-1.JPG?sw=400&sh=400",
+            "detailImgUrl": [
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw8182be18/products/NI_AH7860-139/NI_AH7860-139-1.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwe19af7e5/products/NI_AH7860-139/NI_AH7860-139-2.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw183556e3/products/NI_AH7860-139/NI_AH7860-139-3.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwdb9286d6/products/NI_AH7860-139/NI_AH7860-139-4.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwa952b5f4/products/NI_AH7860-139/NI_AH7860-139-5.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw6e676ce7/products/NI_AH7860-139/NI_AH7860-139-6.JPG"
+            ],
+            "stock": 100
+        },
+        {
+            "id": 1,
+            "nombre": "Zapatillas Jordan Air 6 Retro",
+            "descripcion": "Las zapatillas Jordan Air 6 Retro son un must actual que trae el recuerdo un momento que puso de pie al mundo: cuando Michael Jordan ganó su primer título en básquetbol con estas zapatillas. Para cuando ganó el título número 6 había dado una lección a la liga y había puesto a sus retadores a sus pies. Este calzado increiblemente llamativo con un estilo innegable, se asienta en una base neutra con reflejos brillantes en la mediasuela, el bloqueo de encaje y la plantilla. Su suela exterior helada y traslúcida completan el estilo de un ganador. Tu look es único siempre, y lo completás con estas zapatillas que te llevan a otra dimensión. Usalas con unas bikers, o unos pantcourt y rompé tu onda.",
+            "precio": "48.999",
+            "categorias": [
+                1,
+                2
+            ],
+            "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw4d5d3ba8/products/NI_DQ4914-103/NI_DQ4914-103-1.JPG?sw=400&sh=400",
+            "detailImgUrl": [
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw4d5d3ba8/products/NI_DQ4914-103/NI_DQ4914-103-1.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwa64fee9a/products/NI_DQ4914-103/NI_DQ4914-103-2.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwa64fee9a/products/NI_DQ4914-103/NI_DQ4914-103-3.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwa64fee9a/products/NI_DQ4914-103/NI_DQ4914-103-4.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwa64fee9a/products/NI_DQ4914-103/NI_DQ4914-103-5.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwa64fee9a/products/NI_DQ4914-103/NI_DQ4914-103-6.JPG"
+            ],
+            "stock": 32
+        },
+        {
+            "id": 2,
+            "nombre": "Zapatillas Jordan Legacy Air 11 Retro",
+            "descripcion": "Siguiendo las líneas de creatividad y modernidad a las que jordan nos tiene acostumbrados las nuevas Zapatillas Jordan Legacy Air 11 Retro se caracterizan por la mezcla de materiales y variedad de estampados animal print. Perfectas para vos que te gusta innovar y destacarte entre la multitud, la combinación de colores incluyendo los blanco y negro con un Jumpman metálico en el cuello y los toques rojo en la lengüeta y el talón; definitivamente las convierte en un nuevo capítulo del legado del calzado e icono cultural.",
+            "precio": "52.999",
+            "categorias": [
+                1,
+                2
+            ],
+            "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dwce3c938f/products/NI_AR0715-010/NI_AR0715-010-1.JPG?sw=400&sh=400",
+            "detailImgUrl": [
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwce3c938f/products/NI_AR0715-010/NI_AR0715-010-1.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwce3c938f/products/NI_AR0715-010/NI_AR0715-010-2.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwce3c938f/products/NI_AR0715-010/NI_AR0715-010-3.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwce3c938f/products/NI_AR0715-010/NI_AR0715-010-4.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwce3c938f/products/NI_AR0715-010/NI_AR0715-010-5.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwce3c938f/products/NI_AR0715-010/NI_AR0715-010-6.JPG"
+            ],
+            "stock": 0
+        },
+        {
+            "id": 3,
+            "nombre": "Zapatillas Nike Blazer Mid 77",
+            "descripcion": "Las zapatillas Nike Blazer Mid 77 son un must vintage de esta temporada que llegaron para rememorar la vieja escuela. Pedida por todos por su apariencia y comodidad, este calzado actualiza un elemento esencial del guardarropa. Al mezclar la diversión retro con el estilo vintage del básquetbol, el Nike Blazer Mid´77ofrece un diseño atemporal que es fácil de usar. Está hecha con una parte superior de cuero nítido que se amolda perfecto combina con la llamativa marca retro y con los toques atractivos de gamuza para proporcionar una sensación premium. El estilo retro va con todo, y también con vos.",
+            "precio": "26.999",
+            "categorias": [
+                0,
+                2
+            ],
+            "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw680813b6/products/NI_DH7694-100/NI_DH7694-100-1.JPG?sw=400&sh=400",
+            "detailImgUrl": [
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw680813b6/products/NI_DH7694-100/NI_DH7694-100-1.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw680813b6/products/NI_DH7694-100/NI_DH7694-100-2.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw680813b6/products/NI_DH7694-100/NI_DH7694-100-3.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw680813b6/products/NI_DH7694-100/NI_DH7694-100-4.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw680813b6/products/NI_DH7694-100/NI_DH7694-100-5.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw680813b6/products/NI_DH7694-100/NI_DH7694-100-6.JPG"
+            ],
+            "stock": 10
+        },
+        {
+            "id": 4,
+            "nombre": "Zapatillas Nike Air Force 1 07 Lv8",
+            "descripcion": "Las zapatillas Nike Air Force 1 ´07 Lv8 forman parte del equipo ficticio de atletismo . Traen la inspiración de los 70 a los elementos básicos de la moda urbana. Están combinadas con la diversión del estilo retro del básquetbol ofreciendo un remaster de lo que ya conocés: superposiciones cosidas, colores llamativos, el logo Swoosh en grande y combinaciones en gamuza para dar mayor resalte y sensación de suavidad. El toque final se lo da el parche letterman del talón que suman un estilo universitario. Este es tu calzado favorito para dentro y fuera de la cancha sin dudas ¿no?",
+            "precio": "27.999",
+            "categorias": [
+                0,
+                2
+            ],
+            "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dwbc424bee/products/NI_DH7568-002/NI_DH7568-002-1.JPG?sw=400&sh=400",
+            "detailImgUrl": [
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwbc424bee/products/NI_DH7568-002/NI_DH7568-002-1.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwbc424bee/products/NI_DH7568-002/NI_DH7568-002-2.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwbc424bee/products/NI_DH7568-002/NI_DH7568-002-3.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwbc424bee/products/NI_DH7568-002/NI_DH7568-002-4.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwbc424bee/products/NI_DH7568-002/NI_DH7568-002-5.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwbc424bee/products/NI_DH7568-002/NI_DH7568-002-6.JPG"
+            ],
+            "stock": 100
+        },
+        {
+            "id": 5,
+            "nombre": "Zapatillas adidas Superstar",
+            "descripcion": "Las zapatillas Adidas Superstar no necesitan mucha presentación. Su historia hizo que dejen de ser un calzado para ser un ícono de la moda. Nacidas en los 70's para el básquet, fueron recorriendo el mundo urbano de la mano del skateboarding y principalmente el hip-hop. Estilo de sobra con el detalle de las tres tiras (three-stripes) típicas de la marca y su característica puntera de caucho.",
+            "precio": "27.299",
+            "categorias": [
+                0,
+                2
+            ],
+            "imagenUrl": "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-dabra-catalog/default/dw1e1cd6b9/products/AD_EG4958/AD_EG4958-1.JPG?sw=400&sh=400",
+            "detailImgUrl": [
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw1e1cd6b9/products/AD_EG4958/AD_EG4958-1.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw1e1cd6b9/products/AD_EG4958/AD_EG4958-2.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw1e1cd6b9/products/AD_EG4958/AD_EG4958-3.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw1e1cd6b9/products/AD_EG4958/AD_EG4958-4.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw1e1cd6b9/products/AD_EG4958/AD_EG4958-5.JPG",
+                "https://www.moov.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw1e1cd6b9/products/AD_EG4958/AD_EG4958-6.JPG"
+            ],
+            "stock": 89
+        },
+        {
+            "id": 6,
+            "nombre": "Camiseta San Antonio Spurs Nike Icon Edition Swingman",
+            "descripcion": "Elige una imagen diferente, pero no menos auténtica. Esta camiseta tiene un diseño y una calidad de fabricación excepcionales para ofrecer lo último en ropa de baloncesto.",
+            "precio": "23.999",
+            "categorias": [
+                0,
+                3
+            ],
+            "imagenUrl": "https://images.footballfanatics.com/san-antonio-spurs/san-antonio-spurs-nike-icon-edition-swingman-jersey-black-jeremy-sochan-mens_ss4_p-13342925+u-1cgq1brel02i72gt4ug1+v-c15c667e1ba046d59db2e8dcd17e8119.jpg?_hv=1&w=340",
+            "detailImgUrl": [
+                "https://images.footballfanatics.com/san-antonio-spurs/san-antonio-spurs-nike-icon-edition-swingman-jersey-black-jeremy-sochan-mens_ss4_p-13342925+u-1cgq1brel02i72gt4ug1+v-c15c667e1ba046d59db2e8dcd17e8119.jpg?_hv=1&w=900",
+                "https://images.footballfanatics.com/san-antonio-spurs/san-antonio-spurs-nike-icon-edition-swingman-jersey-black-jeremy-sochan-mens_ss4_p-13342925+pv-1+u-1cgq1brel02i72gt4ug1+v-2efb3c8c91b942c5abc526cb802fa5df.jpg?_hv=1&w=900",
+                "https://images.footballfanatics.com/san-antonio-spurs/san-antonio-spurs-nike-icon-edition-swingman-jersey-black-jeremy-sochan-mens_ss4_p-13342925+pv-2+u-1cgq1brel02i72gt4ug1+v-6df56581ce794a96a4ff540ce73bb125.jpg?_hv=1&w=900"
+            ],
+            "stock": 5
+        },
+        {
+            "id": 7,
+            "nombre": "Camiseta auténtica Kobe Byrant de Los Angeles Lakers",
+            "descripcion": "Adopta ese elegante estilo retro con esta excelente prenda. Retorna a una época pasada para lucir un fantástico look vintage.",
+            "precio": "32.499",
+            "categorias": [
+                0,
+                3
+            ],
+            "imagenUrl": "https://images.footballfanatics.com/los-angeles-lakers/los-angeles-lakers-kobe-bryant-08-09-authentic-jersey-by-mitchell-and-ness-light-gold-mens_ss4_p-12016507+u-hxps2ffjbtyntj48s40r+v-1802b9aceb024d2c80e406fcb1b344cd.jpg?_hv=1&w=340",
+            "detailImgUrl": [
+                "https://images.footballfanatics.com/los-angeles-lakers/los-angeles-lakers-kobe-bryant-08-09-authentic-jersey-by-mitchell-and-ness-light-gold-mens_ss4_p-12016507+u-hxps2ffjbtyntj48s40r+v-1802b9aceb024d2c80e406fcb1b344cd.jpg?_hv=1&w=900",
+                "https://images.footballfanatics.com/los-angeles-lakers/los-angeles-lakers-kobe-bryant-08-09-authentic-jersey-by-mitchell-and-ness-light-gold-mens_ss4_p-12016507+pv-1+u-hxps2ffjbtyntj48s40r+v-cb557939d49d411fbef4625c442c5a40.jpg?_hv=1&w=900",
+                "https://images.footballfanatics.com/los-angeles-lakers/los-angeles-lakers-kobe-bryant-08-09-authentic-jersey-by-mitchell-and-ness-light-gold-mens_ss4_p-12016507+pv-2+u-hxps2ffjbtyntj48s40r+v-7b0e4f175f414ab99e951284784f3961.jpg?_hv=1&w=900"
+            ],
+            "stock": 87
+        }
+    ]
+}

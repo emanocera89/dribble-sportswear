@@ -15,6 +15,10 @@
     font-size: 14px;
     color: #000;
     text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
 }
 
 .product-card .product-price {

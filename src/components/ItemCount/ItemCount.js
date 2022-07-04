@@ -49,7 +49,7 @@ function ItemCount({ stock, initial, onAdd }) {
                 </InputGroup>
             </Form.Group>
             <div className="d-grid gap-2">
-                <Button onClick={addToCart} disabled={value <= 0 || value > stock}>Agregar al carrito</Button>
+                <Button onClick={addToCart} className="btn-add-to-cart" disabled={value <= 0 || value > stock}>Agregar al carrito</Button>
             </div>
         </Form>
     );
