@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Dribble Sportswear
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dribble es un e-commerce de ropa deportiva, principalmente de basquetbol y urbana en general.
 
-## Available Scripts
+Cuenta con
 
-In the project directory, you can run:
+- Filtro por categorías: Tomando las categorías de la base de datos se generan filtros de productos desde el menú. Los productos pueden tener más de una categoría asociada.
+- Listado de productos: Vista general de productos con foto, precio y nombre.
+- Detalle de producto: Vista con todos los detalles del producto y la opción de agregar una cantidad del mismo.
+- Control de stock: Chequea que los usuarios no puedan agregar más items al carrito de los que hay disponibles.
 
-### `npm start`
+## Instalación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clonar el repositorio
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. En la raíz del proyecto ejecutar el comando 
 
-### `npm test`
+   ```
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Esto instala todas las dependencias del proyecto.
 
-### `npm run build`
+3. Ejecutar  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    para correr el proyecto, que estará disponible en http://localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Dependencias
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Uso de Bootstrap para dar estilos básicos a la app.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Uso de React Router Dom para la navegación.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Uso de React Icons para utilización de los íconos de la app.
 
-## Learn More
+Use de React Loading Skeleton para mostrar un elemento que se está cargando.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Use de www.npoint.io para alojamiento de json remoto, con el objetivo de consumirlo desde la app simulando una api.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Aplicación en funcionamiento
 
-### Analyzing the Bundle Size
+La app se encuentra alojada en el siguiente dominio: https://dribblesports.netlify.app/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Autor
 
-### Making a Progressive Web App
+Emmanuel Nocera
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2022 - Curso de React en CoderHouse
