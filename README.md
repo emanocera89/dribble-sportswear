@@ -2,7 +2,7 @@
 
 Dribble es un e-commerce de ropa deportiva, principalmente de basquetbol y urbana en general.
 
-Cuenta con
+El sitio cuenta con:
 
 - Filtro por categorías: Tomando las categorías de la base de datos se generan filtros de productos desde el menú. Los productos pueden tener más de una categoría asociada.
 - Listado de productos: Vista general de productos con foto, precio y nombre.
@@ -19,7 +19,7 @@ Cuenta con
    npm install
    ```
 
-Esto instala todas las dependencias del proyecto.
+   Esto instala todas las dependencias del proyecto.
 
 3. Ejecutar  
 
@@ -39,9 +39,9 @@ Uso de React Router Dom para la navegación.
 
 Uso de React Icons para utilización de los íconos de la app.
 
-Use de React Loading Skeleton para mostrar un elemento que se está cargando.
+Uso de React Loading Skeleton para mostrar un elemento que se está cargando.
 
-Use de www.npoint.io para alojamiento de json remoto, con el objetivo de consumirlo desde la app simulando una api.
+Uso de www.npoint.io para alojamiento de json remoto, con el objetivo de consumirlo desde la app simulando una api.
 
 
 
