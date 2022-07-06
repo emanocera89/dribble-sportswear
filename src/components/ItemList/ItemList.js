@@ -7,7 +7,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 function ItemList({ items, isLoading }) {
     return (
         <div className='item-list-container'>
-            {isLoading && <div className='skeleton-list'><Skeleton height={420} inline count={4} /></div>}
+            {isLoading && <div className='skeleton-list'><Skeleton height={420} inline count={5} /></div>}
             <Row>
                 {items && items.map(item => 
                     <Item 
@@ -17,6 +17,7 @@ function ItemList({ items, isLoading }) {
                         precio={item.precio} 
                         stock={item.stock} 
                         imagenUrl={item.imagenUrl} 
+                        marca={item.marca}
                     />
                 )}
             </Row>

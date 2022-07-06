@@ -1,10 +1,14 @@
-.navbar-dark .navbar-nav .nav-link {
-    color: rgb(255 255 255 / 100%);
+.navbar {
+    background-color: #fff !important;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #000;
     padding-right: 1rem;
     padding-left: 1rem;
     font-weight: 300;
 }
 
-.navbar-dark .navbar-brand {
+.navbar .navbar-brand {
     width: 150px;
 }

@@ -23,7 +23,7 @@ function ItemDetailContainer(props) {
     }, []);
 
     return (
-        <Container>
+        <Container fluid>
             <ItemDetail item={itemData} isLoading={isLoading} />
         </Container>
     )

@@ -1,3 +1,11 @@
+.item-count-container {
+    display: flex;
+}
+
+.item-count-container .input-container label {
+    margin-bottom: 10px;
+}
+
 .item-count-container .input-counter {
     text-align: center;
     /*border-left: none;
@@ -5,12 +13,61 @@
 }
 
 .item-count-container .input-group .btn {
-    border-color: #ced4da;
     box-shadow: none;
+    width: 42px;
+    background-color: #fff;
+    border-radius: 0;
+    font-family: 'DM Sans';
+    font-size: 24px !important;
+    color: #000;
+    padding: 0;
+}
+
+.item-count-container .input-group .btn.disabled, .item-count-container .input-group .btn:disabled, .item-count-container .input-group fieldset:disabled .btn {
+    opacity: .4;
 }
 
 .item-count-container .helper-container {
     /*text-align: left;*/
     padding-top: 10px;
     line-height: 1.2;
+}
+
+.item-count-container .input-group {
+    height: 42px;
+}
+
+.item-count-container .input-counter {
+    border: none;
+    max-width: 70px;
+}
+
+.item-count-container .btn-add-to-cart {
+    font-size: 16px !important;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    background-color: #000;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 0px;
+    text-decoration: none;
+    transition: background-color .2s;
+    padding: 12px 36px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    max-width: 220px;
+    height: auto !important;
+    margin-left: 40px;
+}
+.item-count-container .btn-add-to-cart:hover {
+    text-decoration: underline;
 }

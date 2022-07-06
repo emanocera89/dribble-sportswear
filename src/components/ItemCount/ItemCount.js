@@ -38,7 +38,8 @@ function ItemCount({ stock, initial, onAdd }) {
 
     return (
         <Form className="item-count-container">
-            <Form.Group className="mb-3">
+            <Form.Group className="input-container">
+                <label>Cantidad</label>
                 <InputGroup className="" hasValidation>
                     <Button variant="outline-secondary" onClick={handleDecreaseQty} disabled={value <= 1}>-</Button>
                     <FormControl className="input-counter" type="number" disabled={value <= 0} value={value} onBlur={handleCheckQty} onChange={e => handleChangeQty(e)} required isInvalid={value > stock} />
@@ -48,7 +49,7 @@ function ItemCount({ stock, initial, onAdd }) {
                     </Form.Control.Feedback>
                 </InputGroup>
             </Form.Group>
-            <div className="d-grid gap-2">
+            <div className="d-grid gap-2 button-container">
                 <Button onClick={addToCart} className="btn-add-to-cart" disabled={value <= 0 || value > stock}>Agregar al carrito</Button>
             </div>
         </Form>

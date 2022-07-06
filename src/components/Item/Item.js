@@ -1,29 +1,35 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Badge, Col, Card, Button } from 'react-bootstrap';
-import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import './Item.css';
+import BrandLogo from '../BrandLogo/BrandLogo';
 
-function Item({ id, nombre, precio, stock, imagenUrl }) {
+function Item({ id, nombre, precio, stock, marca, imagenUrl }) {
     return (
-        <Col xs={3}>
-            <Card className="product-card">
-                {stock === 0 ?
-                    <div className="product-badge-wrapper"><Badge pill bg="danger" className="product-badge-danger">Sin stock</Badge></div>
-                    :
-                    <div className="product-badge-wrapper"><Badge pill bg="light" text="dark" className="product-badge-light">Stock: {stock}</Badge></div>
-                }
-                <Link to={`/item/${id}`} title={nombre}><Card.Img className="product-img" variant="top" src={imagenUrl} alt={nombre} /></Link>
-                <Card.Body>
-                    <Card.Title className="product-title"><Link to={`/item/${id}`} title={nombre}>{nombre}</Link></Card.Title>
-                    <Card.Text className="product-price">${precio}</Card.Text>
-                    {/*<ItemCount stock={stock} initial={1} />*/}
-                    <div className='d-grid'>
-                        <Link to={`/item/${id}`} className='btn btn-outline-dark'>Ver detalle</Link>
+        <div className='product-container'>
+            <div className="product-item-small">
+                <Link to={`/item/${id}`} title={nombre}>
+                    <div className="product-item-small__visual">
+                        <div className="brand">
+                            <BrandLogo brand={marca} />
+                        </div>
+                        <img className="product-image normal-image" src={imagenUrl} alt={nombre} />
+                        <div className="pill"><span className="black-bg">{stock}</span></div>
                     </div>
-                </Card.Body>
-            </Card>
-        </Col>
+                </Link>
+                <div className="product-item-small__info">
+                    <h3 className="product-name"><Link to={`/item/${id}`} title={nombre}>{nombre}</Link></h3>
+                    <div className="price">
+                        <div className="price-box price">
+                            <span className="regular-price">
+                                <span className="price">$&nbsp;{precio}</span></span>
+                        </div>
+                    </div>
+                    <div className="sizes-container">
+                        <Link to={`/item/${id}`} className="button button__black button__noborder item-add-to-cart" title="Ver detalle">Ver detalle</Link>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 }
 
