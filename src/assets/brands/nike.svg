@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>graphics/brands/company/nike</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.4047856,21.7982011 L11.8489359,22.4620015 C8.80502864,26.1580026 6.03003181,30.5623245 5.99976875,33.9022997 C5.98838663,35.2352689 6.41349035,36.3989409 7.43393684,37.2809996 C8.90286611,38.5494119 10.5206311,38.9973581 12.1308225,39 C14.2067551,39.0026095 16.2701258,38.2638805 17.9838945,37.5870427 L19.1642177,37.1103303 C24.4012286,34.9291457 55.7894025,21.2949204 55.7894025,21.2949204 C56.0927477,21.1429025 56.0633343,20.9563648 55.7337952,21.0091339 L55.5917137,21.0417579 C54.0175197,21.4652086 18.567637,31.0749688 18.567637,31.0749688 C17.8550697,31.2748977 17.1273553,31.37865 16.4187394,31.3826025 C13.5819706,31.3990711 11.0576908,29.8243426 11.0784356,26.5052591 C11.0863384,25.2065445 11.4841117,23.6407091 12.4047856,21.7982011 Z" id="path-1"></path>
+    </defs>
+    <g id="graphics/brands/company/nike" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Fill-137" fill="#1C1B19" xlink:href="#path-1"></use>
+        <g id="colors/black" mask="url(#mask-2)" fill="#0A0B09">
+            <rect id="Rectangle" x="0" y="0" width="60" height="60"></rect>
+        </g>
+    </g>
+</svg>

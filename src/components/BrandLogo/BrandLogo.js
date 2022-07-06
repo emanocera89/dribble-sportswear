@@ -1,13 +1,19 @@
+import Adidas from '../../assets/brands/adidas.svg';
+import Jordan from '../../assets/brands/airjordan.svg';
+import MitchellAndNess from '../../assets/brands/mitchell_and_ness.svg';
+import Nike from '../../assets/brands/nike.svg';
+
+
 function BrandLogo(props) {
     return (
         <img
             alt={props.brand}
             src={
                 {
-                    'Nike': 'https://www.grosbasket.es/media/catalog/category/nike_1_1.svg',
-                    'Adidas': 'https://www.grosbasket.es/media/catalog/category/adidas_1_1.svg',
-                    'Mitchell & Ness': 'https://www.grosbasket.es/media/catalog/category/mitchellNess_1_1.svg',
-                    'Jordan': 'https://www.grosbasket.es/media/catalog/category/jordanbrand_2_1.svg'
+                    'Nike': Nike,
+                    'Adidas': Adidas,
+                    'Mitchell & Ness': MitchellAndNess,
+                    'Jordan': Jordan
                 }[props.brand]
             }
         />
