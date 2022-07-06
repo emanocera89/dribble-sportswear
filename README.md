@@ -59,6 +59,7 @@ La app se encuentra alojada en el siguiente dominio: https://dribblesports.netli
 - En el detalle de producto la idea es agregar un ícono de lupa para ver en detalle las fotos
 - En el detalle de producto al hacer click en las fotos se abrirá una galería a pantalla completa
 - La idea es agregar un buscador en el Navbar que filtre por nombre
+- Se ajustará la vista mobile
 - Se va a agregar un footer
 
 ### Autor
