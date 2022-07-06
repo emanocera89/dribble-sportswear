@@ -50,7 +50,7 @@ Uso de www.npoint.io para alojamiento de json remoto, con el objetivo de consumi
 La app se encuentra alojada en el siguiente dominio: https://dribblesports.netlify.app/
 
 
-# Próximos pasos
+## Próximos pasos
 
 - Se va a agregar la opción de elegir talle (será un combo con los talles disponibles para cada producto)
 - El stock se mostrará solo en el detalle del producto
