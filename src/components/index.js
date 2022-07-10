@@ -1,3 +1,4 @@
+import Cart from "./Cart/Cart";
 import CartWidget from "./CartWidget/CartWidget";
 import Item from "./Item/Item";
 import ItemCount from "./ItemCount/ItemCount";
@@ -7,6 +8,7 @@ import StickyNavbar from "./StickyNavbar/StickyNavbar";
 import ItemDetailContainer from "./ItemDetailContainer/ItemDetailContainer";
 
 export {
+    Cart,
     CartWidget,
     Item,
     ItemCount,

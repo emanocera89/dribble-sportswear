@@ -4,7 +4,7 @@ import { Form, InputGroup, FormControl, Button } from 'react-bootstrap';
 import './ItemCount.css';
 
 function ItemCount({ stock, initial, onAdd }) {
-    const [value, setValue] = useState(stock != 0 ? initial : 0);
+    const [value, setValue] = useState(stock !== 0 ? initial : 0);
 
     const handleChangeQty = (e) => {
         const inputValue = e.target.value;
@@ -32,12 +32,14 @@ function ItemCount({ stock, initial, onAdd }) {
         }
     }
 
-    const addToCart = () => {
-        alert(value + " item/s agregado/s al carrito")
+    const handleAddToCart = (e) => {
+        e.preventDefault();
+        onAdd(value);
+        setValue(initial);
     }
 
     return (
-        <Form className="item-count-container">
+        <Form className="item-count-container" onSubmit={e => console.log('submit')}>
             <Form.Group className="input-container">
                 <label>Cantidad</label>
                 <InputGroup className="" hasValidation>
@@ -50,7 +52,7 @@ function ItemCount({ stock, initial, onAdd }) {
                 </InputGroup>
             </Form.Group>
             <div className="d-grid gap-2 button-container">
-                <Button onClick={addToCart} className="btn-add-to-cart" disabled={value <= 0 || value > stock}>Agregar al carrito</Button>
+                <Button type="submit" onClick={handleAddToCart} className="btn-add-to-cart" disabled={value <= 0 || value > stock}>Agregar al carrito</Button>
             </div>
         </Form>
     );

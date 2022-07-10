@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { ThemeProvider } from 'react-bootstrap';
-import { StickyNavbar, ItemListContainer, ItemDetailContainer } from "./components";
+import { StickyNavbar, ItemListContainer, ItemDetailContainer, Cart } from "./components";
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Route exact path="/" element={<ItemListContainer title="Nuestros productos" />}></Route>
           <Route exact path="/category/:categoryId" element={<ItemListContainer title="Nuestros productos" />}></Route>
           <Route exact path="/item/:productId" element={<ItemDetailContainer />}></Route>
-          
+          <Route exact path="/cart" element={<Cart />}></Route>
         </Routes>
       </div>
     </ThemeProvider>

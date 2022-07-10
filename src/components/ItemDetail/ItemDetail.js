@@ -1,4 +1,5 @@
-import { Row, Col, Carousel } from 'react-bootstrap';
+import { useState } from 'react';
+import { Row, Col, Button } from 'react-bootstrap';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 import { Link } from 'react-router-dom';
@@ -7,6 +8,12 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import BrandLogo from '../BrandLogo/BrandLogo';
 
 function ItemDetail({ item, isLoading }) {
+    const [quantity, setQuantity] = useState(0);
+
+    const onAdd = (qty) => {
+        setQuantity(qty)
+    }
+
     return (
         <div className='product-detail-container'>
             <div className="uk-grid-small uk-grid">
@@ -100,7 +107,8 @@ function ItemDetail({ item, isLoading }) {
                                                     </div>
                                                 </div>
                                                 <div className="product-options-bottom">
-                                                    <ItemCount stock={item.stock} initial={1} />
+                                                    {quantity <= 0 && <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />}
+                                                    {quantity > 0 && <Link to="/cart" className="btn-submit">Comprar ahora ({quantity})</Link>}
                                                 </div>
                                             </div>
                                         </>
