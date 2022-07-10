@@ -49,6 +49,19 @@ Uso de www.npoint.io para alojamiento de json remoto, con el objetivo de consumi
 
 La app se encuentra alojada en el siguiente dominio: https://dribblesports.netlify.app/
 
+
+## Próximos pasos
+
+- Se va a agregar la opción de elegir talle (será un combo con los talles disponibles para cada producto)
+- El stock se mostrará solo en el detalle del producto
+- Se va a agregar una página de inicio con varios carousel de productos destacados y ofertas,banners de categorías, etc
+- El detalle de producto se va a mejorar, agregando más detalle a la descripción, productos sugeridos/relacionados, etc
+- En el detalle de producto la idea es agregar un ícono de lupa para ver en detalle las fotos
+- En el detalle de producto al hacer click en las fotos se abrirá una galería a pantalla completa
+- La idea es agregar un buscador en el Navbar que filtre por nombre
+- Se ajustará la vista mobile
+- Se va a agregar un footer
+
 ### Autor
 
 Emmanuel Nocera
