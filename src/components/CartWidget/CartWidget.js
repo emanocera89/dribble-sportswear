@@ -1,15 +1,21 @@
 import './CartWidget.css';
 import { Badge } from "react-bootstrap";
 import { IoCartOutline } from "react-icons/io5";
+import { useContext } from 'react';
+import CartContext from '../../store/CartContext';
+import { Link } from 'react-router-dom';
 
 function CartWidget() {
+
+    const cartCtx = useContext(CartContext);
+
     return (
-        <button className="d-flex cart-container" title="El carrito está vacío">
+        <Link to="/cart" className="d-flex cart-container" title={cartCtx.totalQuantity <= 0 ? `El carrito está vacío` : `Hay ${cartCtx.totalQuantity} item/s en el carrito`}>
             <IoCartOutline />
             <Badge className="cart-counter" pill>
-                0
+                {cartCtx.totalQuantity}
             </Badge>
-        </button>
+        </Link>
     );
 }
 

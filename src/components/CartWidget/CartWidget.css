@@ -3,6 +3,7 @@
     background: transparent;
     border: none;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    text-decoration: none;
 }
 
 .cart-container:hover {
@@ -17,4 +18,5 @@
 .cart-container .cart-counter {
     background-color: #ea6a3b !important;
     margin-left: 5px;
+    margin-bottom: auto;
 }

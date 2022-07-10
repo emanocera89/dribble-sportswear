@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
@@ -6,13 +6,26 @@ import { Link } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css'
 import BrandLogo from '../BrandLogo/BrandLogo';
+import CartContext from '../../store/CartContext';
 
 function ItemDetail({ item, isLoading }) {
-    const [quantity, setQuantity] = useState(0);
+
+    const [scroll, setScroll] = useState()
+
+    const cartCtx = useContext(CartContext);
 
     const onAdd = (qty) => {
-        setQuantity(qty)
+        cartCtx.addItem(item, qty);
     }
+
+    useEffect(() => {
+        document.addEventListener("scroll", () => {
+            const scrollCheck = window.scrollY
+            console.log(scrollCheck)
+            setScroll(scrollCheck)
+
+        })
+    }, [scroll, setScroll])
 
     return (
         <div className='product-detail-container'>
@@ -81,7 +94,7 @@ function ItemDetail({ item, isLoading }) {
                                                             <span className="regular-price">
                                                                 <span className="price">$&nbsp;{item.precio}</span>                                                                        </span>
                                                         </div>
-                                                        <p className='mt-4'>{item.descripcion}</p>
+                                                        <p className='mt-4 product-description'>{item.descripcion}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -107,8 +120,10 @@ function ItemDetail({ item, isLoading }) {
                                                     </div>
                                                 </div>
                                                 <div className="product-options-bottom">
-                                                    {quantity <= 0 && <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />}
-                                                    {quantity > 0 && <Link to="/cart" className="btn-submit">Comprar ahora ({quantity})</Link>}
+                                                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                                                    <div className='mt-4'>
+                                                        <Link to="/cart" className="btn-submit">Comprar ahora</Link>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </>

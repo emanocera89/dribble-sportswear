@@ -129,7 +129,7 @@
 
 .product-detail-container .btn-submit {
     font-size: 16px !important;
-    line-height: 36px;
+    line-height: 40px;
     font-weight: 700;
     letter-spacing: .2px;
     background-color: #000;
@@ -149,6 +149,14 @@
     display: block;
     width: 100%;
     text-transform: uppercase;
-    max-width: 50%;
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     /*height: auto !important;*/
+}
+
+.product-detail-container .product-description {
+    max-height: 115px;
+    overflow: hidden;
 }
