@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const CartContext = React.createContext({
     cartItems: [],
     totalQuantity: 0,
+    totalPrice: 0.00,
     isInCart: false,
     addItem: () => { },
     removeItem: () => { },
@@ -12,6 +13,7 @@ const CartContext = React.createContext({
 export const CartContextProvider = (props) => {
     const [cartItems, setCartItems] = useState([]);
     const [totalQuantity, setTotalQuantity] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0.00);
     const [isInCart, setIsInCart] = useState(false);
 
     const addItem = (item, quantity) => {
@@ -21,13 +23,17 @@ export const CartContextProvider = (props) => {
 
         if (idFound == -1) {
             // el producto no está en el carrito, entonces genera un nuevo Id en el array
-            const price = parseFloat(item.precio) * quantity;
+            const subtotal = parseFloat(item.precio) * quantity;
             newCartItems = [
                 ...newCartItems,
                 {
                     itemId: item.id,
+                    name: item.nombre,
+                    description: item.descripcion,
+                    image: item.imagenUrl,
+                    price: item.precio,
                     item: item,
-                    price: price,
+                    subtotal: subtotal,
                     quantity: quantity
                 }
             ];
@@ -36,19 +42,24 @@ export const CartContextProvider = (props) => {
             // el producto ya existe en el carrito, entonces actualiza la cantidad
             const itemFound = newCartItems[idFound]
             const newQty = itemFound.quantity + quantity;
-            const price = parseFloat(item.precio) * newQty;
-            newCartItems[idFound] = { ...itemFound, quantity: newQty, price: price }
+            const subtotal = parseFloat(item.precio) * newQty;
+            newCartItems[idFound] = { ...itemFound, quantity: newQty, subtotal: subtotal }
 
 
             alert("Se actualizó la cantidad de este producto en el carrito");
             setIsInCart(true);
         }
         updateTotalQuantity(newCartItems);
+        updateTotalPrice(newCartItems);
         setCartItems(newCartItems);
     }
 
     const updateTotalQuantity = (arr) => {
         setTotalQuantity(arr.reduce((total, currentValue) => total = total + currentValue.quantity, 0));
+    }
+
+    const updateTotalPrice = (arr) => {
+        setTotalPrice(arr.reduce((total, currentValue) => total = total + currentValue.subtotal, 0));
     }
 
     const removeItem = (itemId) => {
@@ -58,6 +69,7 @@ export const CartContextProvider = (props) => {
         if (idFound > -1) {
             newCartItems.splice(idFound, 1);
             updateTotalQuantity(newCartItems);
+            updateTotalPrice(newCartItems);
             setCartItems(newCartItems);
         }
     }
@@ -65,6 +77,7 @@ export const CartContextProvider = (props) => {
     const clear = () => {
         setIsInCart(false);
         updateTotalQuantity([]);
+        updateTotalPrice([]);
         setCartItems([]);
     }
 
@@ -72,6 +85,7 @@ export const CartContextProvider = (props) => {
         <CartContext.Provider value={{
             cartItems: cartItems,
             totalQuantity: totalQuantity,
+            totalPrice: totalPrice,
             isInCart: isInCart,
             addItem: addItem,
             removeItem: removeItem,

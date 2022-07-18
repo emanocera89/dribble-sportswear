@@ -10,6 +10,7 @@ function CartWidget() {
     const cartCtx = useContext(CartContext);
 
     return (
+        cartCtx.totalQuantity > 0 &&
         <Link to="/cart" className="d-flex cart-container" title={cartCtx.totalQuantity <= 0 ? `El carrito está vacío` : `Hay ${cartCtx.totalQuantity} item/s en el carrito`}>
             <IoCartOutline />
             <Badge className="cart-counter" pill>

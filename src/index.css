@@ -51,3 +51,7 @@ input[type=number] {
 .react-loading-skeleton {
   border-radius: 0px !important;
 }
+
+.text-right {
+  text-align: right!important;
+}
