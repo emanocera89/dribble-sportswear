@@ -130,8 +130,8 @@
 .product-detail-container .btn-submit {
     font-size: 16px !important;
     line-height: 40px;
-    font-weight: 700;
-    letter-spacing: .2px;
+    font-weight: 500;
+    letter-spacing: 2px;
     background-color: #000;
     color: #fff;
     border-width: 1px;
@@ -150,10 +150,12 @@
     width: 100%;
     text-transform: uppercase;
     max-width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+ 
     /*height: auto !important;*/
+}
+
+.product-detail-container .btn-submit:hover {
+    text-decoration: underline;
 }
 
 .product-detail-container .product-description {

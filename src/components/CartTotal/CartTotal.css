@@ -1,0 +1,75 @@
+.cart-total-container {
+    padding: 0 40px;
+    background-color: #f5f5f5;
+    width: 32%;
+    position: fixed;
+    right: 20px;
+    top: 160px;
+}
+
+.cart-total-container .cart-shipping-cost p, 
+.cart-total-container .cart-subtotal p {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.cart-total-container .cart-checkout-summary-divider {
+    border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 12px;
+}
+
+.cart-total-container .estimated-total {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.cart-total-container .grand-total {
+    display: block;
+    font-weight: 600;
+}
+
+.cart-total-container .btn-submit {
+    font-size: 16px !important;
+    line-height: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    background-color: #000;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 0px;
+    text-decoration: none;
+    transition: background-color .2s;
+    padding: 12px 36px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    max-width: 100%;
+    bottom: 0;
+    left: 0;
+    /* height: auto !important; */
+}
+
+.cart-total-container .btn-submit:hover {
+    text-decoration: underline;
+}
+
+.cart-total-container .cards-container {
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.cart-total-container .icon.payment-card-icon {
+    width: 38px;
+    margin-right: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+}

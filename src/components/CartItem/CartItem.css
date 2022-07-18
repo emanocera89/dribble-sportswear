@@ -1,0 +1,125 @@
+.cart-item {
+    list-style: none;
+    padding: 24px;
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 24px;
+}
+
+.cart-item .card-product-image {
+    width: 204px;
+    height: auto;
+    margin-right: 24px;
+}
+
+.cart-item .item-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+}
+
+.cart-item .card-product-info {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.cart-item .item-name {
+    color: #000 !important;
+    font-size: 24px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.cart-item .item-name:hover {
+    text-decoration: underline;
+}
+
+.cart-item .item-attributes {
+    vertical-align: top;
+    padding-left: 0;
+}
+
+.cart-item .item-attributes {
+    width: 100%;
+    margin-right: 70px;
+    overflow-y: visible;
+}
+
+.cart-item .item-attributes .line-item-attributes {
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.cart-item .line-item-price {
+    width: 68px;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    margin-right: 24px;
+}
+
+.cart-item .line-item-price .line-item-price-info,
+.cart-item .line-item-price span {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    line-height: 24px;
+    letter-spacing: normal;
+}
+
+.cart-item .line-item-quantity {
+    width: 200px;
+    margin-right: 24px;
+    text-align: right;
+}
+
+.cart-item .line-item-quantity .quantity-form .quantity-label,
+.cart-item .line-item-quantity span {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 4px;
+}
+
+.cart-item .line-item-total-price {
+    text-align: right;
+    width: 200px;
+}
+
+.cart-item .line-item-total-price .line-item-price-info,
+.cart-item .line-item-total-price span {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 18px;
+}
+
+.cart-item .pricing {
+    font-weight: 600;
+}
+
+.cart-item .remove-line-item {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 34px;
+    right: 24px;
+}
+
+.cart-item .remove-line-item svg {
+    width: 24px;
+    height: 24px;
+}
+
+.cart-item .name,
+.cart-item .line-item-price .line-item-price-info,
+.cart-item .line-item-quantity,
+.cart-item .line-item-total-price .line-item-price-info {
+    font-weight: 500;
+}
+
+

@@ -10,22 +10,14 @@ import CartContext from '../../store/CartContext';
 
 function ItemDetail({ item, isLoading }) {
 
-    const [scroll, setScroll] = useState()
+    const [canBuy, setCanBuy] = useState(false);
 
     const cartCtx = useContext(CartContext);
 
     const onAdd = (qty) => {
         cartCtx.addItem(item, qty);
+        setCanBuy(true);
     }
-
-    useEffect(() => {
-        document.addEventListener("scroll", () => {
-            const scrollCheck = window.scrollY
-            console.log(scrollCheck)
-            setScroll(scrollCheck)
-
-        })
-    }, [scroll, setScroll])
 
     return (
         <div className='product-detail-container'>
@@ -120,10 +112,13 @@ function ItemDetail({ item, isLoading }) {
                                                     </div>
                                                 </div>
                                                 <div className="product-options-bottom">
-                                                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
-                                                    <div className='mt-4'>
-                                                        <Link to="/cart" className="btn-submit">Comprar ahora</Link>
-                                                    </div>
+                                                    {canBuy ?
+                                                        <div className='mt-4'>
+                                                            <Link to="/cart" className="btn-submit">Comprar ahora</Link>
+                                                        </div>
+                                                        :
+                                                        <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
+                                                    }
                                                 </div>
                                             </div>
                                         </>
