@@ -5,7 +5,8 @@ import { Container } from 'react-bootstrap';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+import 'react-loading-skeleton/dist/skeleton.css';
+import { collection, getDocs, getDoc, doc, getFirestore } from 'firebase/firestore';
 
 
 function ItemListContainer() {
@@ -15,33 +16,56 @@ function ItemListContainer() {
   const [isLoading, setIsLoading] = useState(false);
   const [title, setTitle] = useState("");
 
-  useEffect(() => {
+  const getItems = () => {
     setIsLoading(true);
     setItems([]);
-    setTimeout(() => {
-      fetch("https://api.npoint.io/b41f44aae25fe3b72f3b")
-        .then((resp) => resp.json())
-        .then((data) => { 
-          // chequea si categoryId está definido o no
-          if (params.categoryId === undefined ) {
-            // guarda todo el listado de productos
-            setItems(data.items);
-            setTitle("Nuestros productos");
-          } else {
-            // filtra productos de acuerdo al categoryId, buscando dentro del array de categorías de cada producto
-            setItems(data.items.filter(i => i.categorias.includes(parseInt(params.categoryId))));
-            setTitle(data.categorias[params.categoryId].nombre)
-          }
-          setIsLoading(false);
-        });
-    }, 2000);
-  }, [params.categoryId]);
+    setTitle("");
 
+    const db = getFirestore();
+    const itemsCollection = collection(db, "items");
+    const categoryRef = doc(db, "categorias", String(params.categoryId));
+
+    getDocs(itemsCollection).then((snapshot) => {
+      if (snapshot.docs.length > 0) {
+        // obtiene items
+        let itemsArr = snapshot.docs.map((doc) => doc.data());
+        let category = params.categoryId;
+
+        if (category === undefined) {
+          // guarda todo el listado de productos
+          setItems(itemsArr);
+        } else {
+          // filtra productos de acuerdo al categoryId, buscando dentro del array de categorías de cada producto
+          setItems(itemsArr.filter(i => i.categorias.includes(parseInt(params.categoryId))));
+        }
+
+        getDoc(categoryRef).then((snapshot) => {
+          if (snapshot.exists()) {
+            // obtiene categorías
+            const results = [snapshot.data()];
+            setTitle(results[0].nombre);
+          } else {
+            //console.log("la categoría no existe");
+            setTitle("Nuestros productos")
+            setIsLoading(false);
+          }
+        })
+        setIsLoading(false);
+      } else {
+        setTitle("No se han encontrado productos")
+        setIsLoading(false);
+      }
+    })
+  }
+
+  useEffect(() => {
+    getItems();
+  }, [params.categoryId]);
 
 
   return (
     <Container fluid className='pt-4 pb-4'>
-      {isLoading ? <Skeleton height={35} width={200} className="mb-4"/> : <h2 className='mb-4'>{title}</h2>}
+      {isLoading ? <Skeleton height={35} width={200} className="mb-4" /> : <h2 className='mb-4'>{title}</h2>}
       <ItemList items={items} isLoading={isLoading} />
     </Container>
   );
