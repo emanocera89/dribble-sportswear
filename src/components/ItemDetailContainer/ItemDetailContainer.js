@@ -3,6 +3,7 @@ import "./ItemDetailContainer.css";
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
+import { getDoc, doc, getFirestore } from 'firebase/firestore';
 
 function ItemDetailContainer(props) {
     const params = useParams()
@@ -10,16 +11,21 @@ function ItemDetailContainer(props) {
     const [isLoading, setIsLoading] = useState(false)
 
     const getItem = () => {
-        fetch(`https://api.npoint.io/b41f44aae25fe3b72f3b/items/${params.productId}`)
-            .then((resp) => resp.json())
-            .then((data) => { setItemData(data); setIsLoading(false)});
+        setIsLoading(true);
+        setItemData([]);
+        const db = getFirestore();
+        const itemRef = doc(db, "items", String(params.productId));
+        getDoc(itemRef).then((snapshot) => {
+            if (snapshot.exists()) {
+                const results = [snapshot.data()];
+                setItemData(results[0]);
+                setIsLoading(false);
+            }
+        })
     }
 
     useEffect(() => {
-        setIsLoading(true);
-        setTimeout(() => {
-            getItem();
-        }, 2000);
+        getItem();
     }, []);
 
     return (

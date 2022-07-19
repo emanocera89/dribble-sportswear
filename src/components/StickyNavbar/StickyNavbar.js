@@ -4,17 +4,27 @@ import CartWidget from '../CartWidget/CartWidget';
 import Logo from '../../assets/logo.svg';
 import { Link, NavLink } from 'react-router-dom';
 import './StickyNavbar.css';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 function StickyNavbar() {
 
   const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-    fetch("https://api.npoint.io/b41f44aae25fe3b72f3b/categorias")
-      .then((resp) => resp.json())
-      .then((data) => {setCategories(data)})
-  }, []);
+  const getCategories = () => {
+    setCategories([]);
+    const db = getFirestore();
+    const categoriesCollection = collection(db, "categorias");
+    getDocs(categoriesCollection).then((snapshot) => {
+      if (snapshot.docs.length > 0) {
+        let catArr = snapshot.docs.map((doc) => doc.data());
+        setCategories(catArr);
+      }
+    })
+  }
 
+  useEffect(() => {
+      getCategories();
+  }, []);
 
   return (
     <Navbar expand="lg" sticky="top" bg="light" variant="light">
