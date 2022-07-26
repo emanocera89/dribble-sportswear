@@ -43,6 +43,8 @@ Uso de React Loading Skeleton para mostrar un elemento que se está cargando.
 
 Uso de www.npoint.io para alojamiento de json remoto, con el objetivo de consumirlo desde la app simulando una api.
 
+Uso de uiball/loaders para Loaders.
+
 
 
 ## Aplicación en funcionamiento

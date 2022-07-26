@@ -11,8 +11,8 @@ function Cart() {
 
     const cartCtx = useContext(CartContext);
 
-    const handleRemoveItem = (itemId) => {
-        cartCtx.removeItem(itemId);
+    const handleRemoveItem = (id) => {
+        cartCtx.removeItem(id);
     }
 
     const handleClearCart = () => {

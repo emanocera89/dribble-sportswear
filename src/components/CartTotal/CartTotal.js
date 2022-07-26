@@ -1,5 +1,6 @@
 import { Row, Col, Button } from "react-bootstrap";
 import "./CartTotal.css";
+import { Link } from "react-router-dom";
 
 function CartTotal({ total }) {
     return (
@@ -37,7 +38,7 @@ function CartTotal({ total }) {
             </Row>
             <Row>
                 <Col xs={12}>
-                    <Button className="btn-submit mt-4 mb-3">CHECKOUT</Button>
+                    <Link to="/checkout" className="btn-submit mt-4 mb-3">CHECKOUT</Link>
                 </Col>
             </Row>
             <div className="content-asset">
