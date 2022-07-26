@@ -8,16 +8,20 @@ import StickyNavbar from "./StickyNavbar/StickyNavbar";
 import ItemDetailContainer from "./ItemDetailContainer/ItemDetailContainer";
 import CartItem from "./CartItem/CartItem";
 import CartTotal from "./CartTotal/CartTotal";
+import Checkout from "./Checkout/Checkout";
+import PurchaseOrder from "./PurchaseOrder/PurchaseOrder";
 
 export {
     Cart,
     CartItem,
     CartTotal,
     CartWidget,
+    Checkout,
     Item,
     ItemCount,
     ItemList,
     ItemListContainer,
     StickyNavbar,
-    ItemDetailContainer
+    ItemDetailContainer,
+    PurchaseOrder
 }

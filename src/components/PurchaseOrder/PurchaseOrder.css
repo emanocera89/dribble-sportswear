@@ -1,0 +1,142 @@
+.order-container {
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 60px);
+    padding: 60px 0;
+}
+
+.order-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order-container .card {
+    padding: 48px 56px;
+    position: relative;
+    display: table;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0;
+    border: none;
+    margin: auto;
+    margin-bottom: 24px;
+    max-width: 480px;
+    width: 100%;
+}
+
+.order-container .card .card-header {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+}
+
+.order-container .card .card-header .title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.order-container .card-body {
+    padding: 0;
+}
+
+.order-container .order-number {
+    font-size: 20px;
+}
+
+.order-container .order-item-card {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    border-bottom: solid 1px #ddd;
+}
+
+.order-container .order-item-card .item-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.order-container .order-item-card .item-name {
+    max-width: 180px;
+    font-weight: 400;
+}
+
+
+.order-container .order-item-card .item-subtotal {
+    margin: 0 0 0 auto;
+    text-align: right;
+    font-weight: 500;
+}
+
+.order-container .order-item-list {
+    margin: 20px 0;
+}
+
+.order-container .order-total {
+    display: flex;
+    width: 100%;
+}
+
+.order-container .order-total label {
+    font-weight: 700;
+    font-size: 18px;
+    width: 40%;
+}
+
+.order-container .order-total b {
+    font-weight: 700;
+    font-size: 18px;
+    width: 60%;
+    text-align: right;
+}
+
+.order-container .btn-outlined {
+    font-size: 16px !important;
+    line-height: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    background-color: #000;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 0px;
+    text-decoration: none;
+    transition: background-color .2s;
+    padding: 12px 36px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    max-width: 100%;
+    bottom: 0;
+    left: 0;
+    margin-top: 20px;
+}
+
+.order-container .btn-outlined:hover {
+    text-decoration: underline;
+}
+
+.order-container .check-circle {
+    width: 100px;
+    height: 100px;
+    border: solid 4px #09a95b;
+    line-height: 92px;
+    border-radius: 50%;
+    display: table;
+    margin: auto auto 30px;
+}
+
+.order-container .check-circle svg {
+    width: 50px;
+    height: 50px;
+    color: #09a95b;
+}

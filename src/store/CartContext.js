@@ -19,7 +19,7 @@ export const CartContextProvider = (props) => {
     const addItem = (item, quantity) => {
         setIsInCart(false);
         let newCartItems = [...cartItems];
-        let idFound = cartItems.findIndex(i => i.itemId === item.id);
+        let idFound = cartItems.findIndex(i => i.id === item.id);
 
         if (idFound == -1) {
             // el producto no está en el carrito, entonces genera un nuevo Id en el array
@@ -27,12 +27,12 @@ export const CartContextProvider = (props) => {
             newCartItems = [
                 ...newCartItems,
                 {
-                    itemId: item.id,
+                    id: item.id,
                     name: item.nombre,
                     description: item.descripcion,
                     image: item.imagenUrl,
                     price: item.precio,
-                    item: item,
+                    //item: item,
                     subtotal: subtotal,
                     quantity: quantity
                 }
@@ -62,10 +62,10 @@ export const CartContextProvider = (props) => {
         setTotalPrice(arr.reduce((total, currentValue) => total = total + currentValue.subtotal, 0));
     }
 
-    const removeItem = (itemId) => {
+    const removeItem = (id) => {
         setIsInCart(false);
         let newCartItems = [...cartItems]
-        let idFound = cartItems.findIndex(i => i.itemId === itemId);
+        let idFound = cartItems.findIndex(i => i.id === id);
         if (idFound > -1) {
             newCartItems.splice(idFound, 1);
             updateTotalQuantity(newCartItems);
