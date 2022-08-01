@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import CartContext from "../../store/CartContext";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +13,12 @@ function Checkout() {
 
     const [form, setForm] = useState({ name: "", phone: "", email: "" });
     const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        if (cartCtx.totalQuantity === 0) {
+            navigate(`/cart`, { replace: true });
+        }
+    }, []);
 
 
     const handleChangeInput = (e) => {
