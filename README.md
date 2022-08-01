@@ -45,6 +45,8 @@ Uso de www.npoint.io para alojamiento de json remoto, con el objetivo de consumi
 
 Uso de uiball/loaders para Loaders.
 
+Uso de React-Toastify para las notificaciones.
+
 
 
 ## Aplicación en funcionamiento

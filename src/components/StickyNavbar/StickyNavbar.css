@@ -7,6 +7,19 @@
     padding-right: 1rem;
     padding-left: 1rem;
     font-weight: 300;
+    position: relative;
+}
+
+.navbar .navbar-nav .nav-link.active:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
 }
 
 .navbar .navbar-brand {
