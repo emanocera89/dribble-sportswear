@@ -115,6 +115,7 @@ function ItemDetail({ item, isLoading }) {
                                                     {canBuy ?
                                                         <div className='mt-4'>
                                                             <Link to="/cart" className="btn-submit">Comprar ahora</Link>
+                                                            <Link to="/" className="btn-outlined mt-3">Seguir comprando</Link>
                                                         </div>
                                                         :
                                                         <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CartContext = React.createContext({
     cartItems: [],
@@ -37,7 +39,7 @@ export const CartContextProvider = (props) => {
                     quantity: quantity
                 }
             ];
-            alert("Item agregado al carrito");
+            toast.success("Item agregado al carrito");
         } else {
             // el producto ya existe en el carrito, entonces actualiza la cantidad
             const itemFound = newCartItems[idFound]
@@ -46,7 +48,7 @@ export const CartContextProvider = (props) => {
             newCartItems[idFound] = { ...itemFound, quantity: newQty, subtotal: subtotal }
 
 
-            alert("Se actualizó la cantidad de este producto en el carrito");
+            toast.success("Se actualizó la cantidad de este producto en el carrito");
             setIsInCart(true);
         }
         updateTotalQuantity(newCartItems);
@@ -92,6 +94,7 @@ export const CartContextProvider = (props) => {
             clear: clear
         }}>
             {props.children}
+            <ToastContainer theme="colored" position="bottom-left" />
         </CartContext.Provider>
     )
 }

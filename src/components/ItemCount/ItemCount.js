@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, InputGroup, FormControl, Button } from 'react-bootstrap';
 import './ItemCount.css';
 
+
 function ItemCount({ stock, initial, onAdd }) {
     const [value, setValue] = useState(stock !== 0 ? initial : 0);
 
