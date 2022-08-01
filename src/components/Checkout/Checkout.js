@@ -1,10 +1,11 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import CartContext from "../../store/CartContext";
 import { useNavigate } from "react-router-dom";
 import "./Checkout.css";
 import { collection, getDocs, getDoc, doc, getFirestore, addDoc, writeBatch, where } from 'firebase/firestore';
 import Loading from "../Loading/Loading";
+import CartTotal from "../CartTotal/CartTotal";
 
 function Checkout() {
     const cartCtx = useContext(CartContext);
@@ -12,6 +13,12 @@ function Checkout() {
 
     const [form, setForm] = useState({ name: "", phone: "", email: "" });
     const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        if (cartCtx.totalQuantity === 0) {
+            navigate(`/cart`, { replace: true });
+        }
+    }, []);
 
 
     const handleChangeInput = (e) => {
@@ -80,7 +87,7 @@ function Checkout() {
             {isLoading && <Loading />}
 
                 <Row className="pt-5">
-                    <Col xs={7} className="checkout-user-details-section">
+                    <Col xs={8} className="checkout-user-details-section">
                         <div className="shipping-section">
                             <div className="single-shipping">
                                 <div className="card">
@@ -138,6 +145,9 @@ function Checkout() {
                                 </div>
                             </div>
                         </div>
+                    </Col>
+                    <Col xs={4} className="checkout-cart-details-section">
+                        <CartTotal total={cartCtx.totalPrice} quantity={cartCtx.totalQuantity} hideFooter />
                     </Col>
                 </Row>
 
