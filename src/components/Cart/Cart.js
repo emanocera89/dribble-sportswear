@@ -45,7 +45,7 @@ function Cart() {
                             </ul>
                         </Col>
                         <Col xs={4}>
-                            <CartTotal total={cartCtx.totalPrice} />
+                            <CartTotal total={cartCtx.totalPrice} quantity={cartCtx.totalQuantity} />
                         </Col>
                     </Row>
                 </div>

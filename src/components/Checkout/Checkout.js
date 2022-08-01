@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./Checkout.css";
 import { collection, getDocs, getDoc, doc, getFirestore, addDoc, writeBatch, where } from 'firebase/firestore';
 import Loading from "../Loading/Loading";
+import CartTotal from "../CartTotal/CartTotal";
 
 function Checkout() {
     const cartCtx = useContext(CartContext);
@@ -80,7 +81,7 @@ function Checkout() {
             {isLoading && <Loading />}
 
                 <Row className="pt-5">
-                    <Col xs={7} className="checkout-user-details-section">
+                    <Col xs={8} className="checkout-user-details-section">
                         <div className="shipping-section">
                             <div className="single-shipping">
                                 <div className="card">
@@ -138,6 +139,9 @@ function Checkout() {
                                 </div>
                             </div>
                         </div>
+                    </Col>
+                    <Col xs={4} className="checkout-cart-details-section">
+                        <CartTotal total={cartCtx.totalPrice} quantity={cartCtx.totalQuantity} hideFooter />
                     </Col>
                 </Row>
 
