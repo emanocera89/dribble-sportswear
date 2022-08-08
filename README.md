@@ -7,7 +7,10 @@ El sitio cuenta con:
 - Filtro por categorías: Tomando las categorías de la base de datos se generan filtros de productos desde el menú. Los productos pueden tener más de una categoría asociada.
 - Listado de productos: Vista general de productos con foto, precio y nombre.
 - Detalle de producto: Vista con todos los detalles del producto y la opción de agregar una cantidad del mismo.
-- Control de stock: Chequea que los usuarios no puedan agregar más items al carrito de los que hay disponibles.
+- Control de stock: Chequea que los usuarios no puedan agregar más items al carrito de los que hay disponibles. Se actualiza el stock en la DB cuando el usuario realiza una compra.
+- Carrito de compras: Vista del listado de productos agregados y resumen de compra. Se incluye botón que permite vaciar el carrito.
+- Checkout: Formulario donde se solicitan los datos básicos del usuario y se validan antes de completar la compra.
+- Orden de compra: Al finalizar el proceso se muestra la orden de compra generada con un id aleatorio, donde además se detallan algunos datos de la compra correspondiente. 
 
 ## Instalación
 
@@ -55,6 +58,8 @@ La app se encuentra alojada en el siguiente dominio: https://dribblesports.netli
 
 
 ## Próximos pasos
+
+La idea es continuar trabajando sobre el proyecto con el objetivo de seguir aprendiendo.
 
 - Se va a agregar la opción de elegir talle (será un combo con los talles disponibles para cada producto)
 - El stock se mostrará solo en el detalle del producto
