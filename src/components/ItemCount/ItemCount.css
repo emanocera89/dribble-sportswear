@@ -67,6 +67,7 @@
     max-width: 220px;
     height: auto !important;
     margin-left: 40px;
+    margin-top: 8px;
 }
 .item-count-container .btn-add-to-cart:hover {
     text-decoration: underline;

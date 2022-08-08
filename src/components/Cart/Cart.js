@@ -39,8 +39,8 @@ function Cart() {
                             </div>
 
                             <ul className="cart-item-list">
-                                {cartCtx.cartItems.map((i) => (
-                                    <CartItem item={i} onDelete={handleRemoveItem} />
+                                {cartCtx.cartItems.map((i, id) => (
+                                    <CartItem key={id} item={i} onDelete={handleRemoveItem} />
                                 ))}
                             </ul>
                         </Col>

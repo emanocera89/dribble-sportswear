@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import "./CartItem.css";
 import { IoTrashBinOutline } from "react-icons/io5";
 
-function CartItem({ item, onDelete }) {
+function CartItem({ item, onDelete, ...rest }) {
     return (
-        <li className="cart-item d-flex" key={item.id}>
+        <li className="cart-item d-flex" {...rest}>
             <button className="remove-line-item" onClick={e=> onDelete(item.id)} title="Eliminar del carrito"><IoTrashBinOutline /></button>
             <div className="card-product-image">
                 <Link to={`/item/${item.id}`} className="item-image"><img src={item.image} width="100%" alt={item.name} /></Link>

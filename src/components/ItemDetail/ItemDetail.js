@@ -29,7 +29,7 @@ function ItemDetail({ item, isLoading }) {
                                 <img src={item.detailImgUrl && item.detailImgUrl[0]} width="100%" />
                                 <Row>
                                     {item.detailImgUrl && item.detailImgUrl.map((img, id) => (
-                                        id > 0 && <Col xs={6}><img src={img} width="100%" className='secondary-img' /></Col>
+                                        id > 0 && <Col xs={6} key={id}><img src={img} width="100%" className='secondary-img' /></Col>
                                     ))}
                                 </Row>
                             </>
@@ -37,7 +37,7 @@ function ItemDetail({ item, isLoading }) {
                     </div>
                 </div>
                 <div className="sidebar-right greyBackground-bg">
-                    <form id="product_addtocart_form">
+                    <div id="product_addtocart_form">
                         <div className="sticky-sidebar" >
                             <div className="inner-wrapper-sticky" >
                                 <div className="sidebar-padding">
@@ -127,7 +127,7 @@ function ItemDetail({ item, isLoading }) {
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

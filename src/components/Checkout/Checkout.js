@@ -28,7 +28,7 @@ function Checkout() {
     }
 
     const updateStock = () => {
-        
+
         let newStock = [];
         const db = getFirestore();
         const batch = writeBatch(db);
@@ -50,7 +50,7 @@ function Checkout() {
                 // sobre esa variable de tipo array hago un mapeo y dentro de este uso batch para actualizar el stock de cada item
                 const arrUpdate = newStock.map((i) => batch.update(doc(db, "items", String(i.id)), { stock: i.stock }));
                 batch.commit();
-                console.log(newStock);
+                //console.log(newStock);
 
             } else {
                 // si no puedo obtener el listado de items (la collection, no dejo avanzar al usuario y muestro un error)
@@ -69,13 +69,13 @@ function Checkout() {
             date: new Date(),
             total: cartCtx.totalPrice
         }
-        console.log(order);
+        //console.log(order);
         const db = getFirestore();
         const purchaseOrdersCollection = collection(db, "compras");
         addDoc(purchaseOrdersCollection, order)
-            .then(({ id }) => { 
-                updateStock(); 
-                console.log(id);
+            .then(({ id }) => {
+                updateStock();
+                //console.log(id);
                 cartCtx.clear();
                 setIsLoading(false);
                 navigate(`/purchaseOrder/${id}`, { replace: true });
@@ -85,72 +85,70 @@ function Checkout() {
     return (
         <Container fluid className="checkout-container">
             {isLoading && <Loading />}
-
-                <Row className="pt-5">
-                    <Col xs={8} className="checkout-user-details-section">
-                        <div className="shipping-section">
-                            <div className="single-shipping">
-                                <div className="card">
-                                    <div className="card-header">
-                                        <h4 className="title">Completá el siguiente formulario</h4>
-                                    </div>
-                                    <div className="card-body shipping-content">
-                                        <Form className="shipping-form" onSubmit={handleSubmit}>
-                                            <Form.Group className="mb-4 required" controlId="clientName">
-                                                <Form.Label>Nombre y Apellido</Form.Label>
-                                                <Form.Control
-                                                    type="text"
-                                                    name="name"
-                                                    placeholder="Completa este campo"
-                                                    onChange={handleChangeInput}
-                                                    disabled={isLoading}
-                                                    required
-                                                />
-                                            </Form.Group>
-
-
-                                            <Form.Group className="mb-4 required" controlId="clientPhone">
-                                                <Form.Label>Teléfono</Form.Label>
-                                                <Form.Control
-                                                    type="tel"
-                                                    name="phone"
-                                                    placeholder="Completa este campo"
-                                                    onChange={handleChangeInput}
-                                                    disabled={isLoading}
-                                                    required
-                                                />
-                                            </Form.Group>
+            <Row className="pt-5">
+                <Col xs={8} className="checkout-user-details-section">
+                    <div className="shipping-section">
+                        <div className="single-shipping">
+                            <div className="card">
+                                <div className="card-header">
+                                    <h4 className="title">Completá el siguiente formulario</h4>
+                                </div>
+                                <div className="card-body shipping-content">
+                                    <Form className="shipping-form" onSubmit={handleSubmit}>
+                                        <Form.Group className="mb-4 required" controlId="clientName">
+                                            <Form.Label>Nombre y Apellido</Form.Label>
+                                            <Form.Control
+                                                type="text"
+                                                name="name"
+                                                placeholder="Completa este campo"
+                                                onChange={handleChangeInput}
+                                                disabled={isLoading}
+                                                required
+                                            />
+                                        </Form.Group>
 
 
+                                        <Form.Group className="mb-4 required" controlId="clientPhone">
+                                            <Form.Label>Teléfono</Form.Label>
+                                            <Form.Control
+                                                type="tel"
+                                                name="phone"
+                                                placeholder="Completa este campo"
+                                                onChange={handleChangeInput}
+                                                disabled={isLoading}
+                                                required
+                                            />
+                                        </Form.Group>
 
-                                            <Form.Group className="mb-4 required" controlId="clientEmail">
-                                                <Form.Label>Email</Form.Label>
-                                                <Form.Control
-                                                    type="email"
-                                                    name="email"
-                                                    placeholder="Completa este campo"
-                                                    onChange={handleChangeInput}
-                                                    disabled={isLoading}
-                                                    required
-                                                />
-                                            </Form.Group>
 
 
-                                            <div className="d-block mt-5">
-                                                <Button className="btn-submit" type="submit" disabled={isLoading}>Finalizar Compra</Button>
+                                        <Form.Group className="mb-4 required" controlId="clientEmail">
+                                            <Form.Label>Email</Form.Label>
+                                            <Form.Control
+                                                type="email"
+                                                name="email"
+                                                placeholder="Completa este campo"
+                                                onChange={handleChangeInput}
+                                                disabled={isLoading}
+                                                required
+                                            />
+                                        </Form.Group>
 
-                                            </div>
-                                        </Form>
-                                    </div>
+
+                                        <div className="d-block mt-5">
+                                            <Button className="btn-submit" type="submit" disabled={isLoading}>Finalizar Compra</Button>
+
+                                        </div>
+                                    </Form>
                                 </div>
                             </div>
                         </div>
-                    </Col>
-                    <Col xs={4} className="checkout-cart-details-section">
-                        <CartTotal total={cartCtx.totalPrice} quantity={cartCtx.totalQuantity} hideFooter />
-                    </Col>
-                </Row>
-
+                    </div>
+                </Col>
+                <Col xs={4} className="checkout-cart-details-section">
+                    <CartTotal total={cartCtx.totalPrice} quantity={cartCtx.totalQuantity} hideFooter />
+                </Col>
+            </Row>
         </Container>
     )
 }
